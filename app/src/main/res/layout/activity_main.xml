@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25dp"
+    android:minHeight="25dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:textAppearance="@android:style/TextAppearance.Material.Display1"
+        android:id="@+id/textTitle"
+        android:textColor="#03A9F4"
+        android:textAlignment="center"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textTitle"
+        android:textAppearance="@android:style/TextAppearance.Material.Headline"
+        android:id="@+id/textRuleTitle"
+        android:gravity="top"
+        android:layout_below="@id/textTitle"
+        android:textColor="#9C27B0"
+        android:textAlignment="center"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textRuleTitle"
+        android:text="@string/game_rules"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:id="@+id/textGameRules"
+        android:gravity="top"
+        android:padding="30dp"
+        android:textColor="#FF5722"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textGameRules"
+        android:textAlignment="center"
+        android:id="@+id/startValue"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"
+        android:paddingBottom="10dp"
+        android:inputType="numberDecimal"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/startValue"
+        android:text="Play Game"
+        android:onClick="btnPlayOnClick"
+        />
+</RelativeLayout>

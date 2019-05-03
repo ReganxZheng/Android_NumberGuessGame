@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Lab6_NumGuess</string>
+    <string name="title">Let\'s Guess A Number!</string>
+    <string name="textTitle">General Game Rules</string>
+    <string name="game_rules">You can set a range of number for yourself or the game
+    will go with default value 0 to 100. You can guess multiple times, and under 5 times
+    you get 10 points, under 10 times you get 5 points, over 10 times you will be losing
+    5 points. So guess carefully.</string>
+</resources>
