@@ -44,7 +44,7 @@
         android:textAlignment="center"
         android:id="@+id/startValue"
         android:layout_marginTop="5dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="25dp"
         android:paddingBottom="10dp"
         android:inputType="numberDecimal"
         />
@@ -54,5 +54,6 @@
         android:layout_below="@id/startValue"
         android:text="Play Game"
         android:onClick="btnPlayOnClick"
+        android:id="@+id/buttonPlay"
         />
 </RelativeLayout>
