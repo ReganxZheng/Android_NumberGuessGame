@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:minWidth="25dp"
-    android:minHeight="25dp">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:minWidth="25dp" android:minHeight="25dp">
 
     <TextView
         android:layout_width="match_parent"
@@ -36,13 +34,29 @@
         android:padding="30dp"
         android:textColor="#FF5722"
         />
-
-    <Button
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/textGameRules"
-        android:text="Play Game"
-        android:onClick="btnPlayOnClick"
-        android:id="@+id/buttonPlay"
+        android:gravity="top"
+        android:id="@+id/numGuess"
+        android:inputType="numberDecimal"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/numGuess"
+        android:text="Guess"
+        android:id="@+id/guessBtn"
+        android:onClick="btnClicked"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/guessBtn"
+        android:id="@+id/textMessage"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textAlignment="center"
         />
 </RelativeLayout>
