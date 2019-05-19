@@ -1,6 +1,7 @@
 package nz.ac.aut.dms.android;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,32 +30,24 @@ public class GameActivity extends Activity implements View.OnClickListener {
         numberInput = (EditText) findViewById(R.id.numGuess);
         validate = (Button)findViewById(R.id.guessBtn);
         validate.setOnClickListener(this);
-        newGame();
+        numberToFind = rand.nextInt(MAX_NUMBER)+1;
     }
 
     @Override
     public void onClick(View v) {
         if(v==validate) {
-            validate();
+            validate(v);
         }
     }
 
-    private void validate() {
+    private void validate(View v) {
         int n = Integer.parseInt(numberInput.getText().toString());
         tryCounts++;
 
         if(n==numberToFind) {
-            if(tryCounts<=5) {
-                scores+=10;
-            } else if (tryCounts>5&&tryCounts<=10) {
-                scores+=5;
-            } else {
-                scores-=5;
-            }
-
-            textmsg.setText("Correct! You have find the number " + numberToFind + " in " + tryCounts + " tries\nScores: " +
-                    scores+ "\nPlease start a new game!");
-            newGame();
+//            textmsg.setText("Correct! You have find the number " + numberToFind + " in " + tryCounts + " tries\nScores: " +
+//                    scores+ "\nPlease start a new game!");
+            startActivity(new Intent(this, BackActivity.class));
         }
         else if (n>numberToFind) {
             textmsg.setText("Too hight, try again! Count: " + tryCounts
@@ -66,9 +59,4 @@ public class GameActivity extends Activity implements View.OnClickListener {
         }
     }
 
-    private void newGame() {
-        numberToFind = rand.nextInt(MAX_NUMBER)+1;
-        numberInput.setText("");
-        tryCounts=0;
-    }
 }

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/resultMsg"
+        android:layout_width="match_parent"
+        android:layout_height="134dp"
+        android:text="@string/resultMsg"
+        android:textAppearance="@android:style/TextAppearance.Material.Display1"
+        android:textColor="#03A9F4"
+        android:textAlignment="center"
+        />
+
+    <Button
+        android:id="@+id/plyaAgainBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/resultMsg"
+        android:text="playAgain" />
+
+    <Button
+        android:id="@+id/exitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/resultMsg"
+        android:text="Exit"
+        android:layout_alignRight="@id/resultMsg"/>
+</RelativeLayout>
